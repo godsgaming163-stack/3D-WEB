@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#05060a" />
+  <title>VOID//LAB — Digital Experiments</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="noise"></div>
+  <div class="vignette"></div>
+
+  <header class="nav">
+    <a class="brand" href="#top">VOID<span>//</span>LAB</a>
+    <nav class="navlinks" aria-label="Main navigation">
+      <a href="#experiments">EXPERIMENTS</a>
+      <a href="#system">SYSTEM</a>
+      <a href="#about">ABOUT</a>
+    </nav>
+    <button class="menu" id="menuBtn" aria-label="Open menu"><span></span><span></span></button>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <div id="scene" aria-hidden="true"></div>
+
+      <div class="hero-copy">
+        <div class="eyebrow"><span class="live-dot"></span> LIVE DIGITAL EXPERIMENT</div>
+        <h1><span class="ghost">BUILD</span> THE<br><span class="glitch" data-text="IMPOSSIBLE">IMPOSSIBLE</span></h1>
+        <p class="hero-sub">
+          Interactive worlds, motion systems and WebGL experiences engineered to feel less like websites
+          and more like places.
+        </p>
+        <div class="hero-actions">
+          <a class="btn primary" href="#experiments">ENTER LAB <span>↘</span></a>
+          <a class="btn secondary" href="#about">ABOUT THE LAB</a>
+        </div>
+      </div>
+
+      <div class="hero-readout">
+        <div><span>RENDER</span><strong id="fps">60</strong></div>
+        <div><span>MODE</span><strong>NEON</strong></div>
+        <div><span>INPUT</span><strong>MOUSE / TOUCH</strong></div>
+      </div>
+
+      <div class="scroll-note"><span></span> SCROLL TO EXPLORE</div>
+    </section>
+
+    <section class="manifesto" id="about">
+      <div class="section-tag">/ 001 — MANIFESTO</div>
+      <div class="manifesto-grid">
+        <h2>Pixels are<br><em>material.</em></h2>
+        <p>
+          VOID//LAB is a fictional creative-technology studio concept. The interface is built around
+          depth, distortion, lighting and motion — the same visual language you see in experimental
+          cinematic web experiences.
+        </p>
+      </div>
+    </section>
+
+    <section class="experiments" id="experiments">
+      <div class="section-head">
+        <div>
+          <div class="section-tag">/ 002 — EXPERIMENTS</div>
+          <h2>Selected systems</h2>
+        </div>
+        <div class="section-index">03 / 03</div>
+      </div>
+
+      <div class="cards">
+        <article class="card card-a">
+          <div class="card-visual">
+            <div class="orb"></div>
+            <div class="scan"></div>
+            <div class="mini-grid"></div>
+          </div>
+          <div class="card-meta"><span>01</span><span>WEBGL / MOTION</span></div>
+          <h3>Liquid Interface</h3>
+          <p>Fluid layers, cinematic depth and reactive transitions.</p>
+          <a href="#system" class="card-link">OPEN SYSTEM ↗</a>
+        </article>
+
+        <article class="card card-b">
+          <div class="card-visual">
+            <div class="rings"></div>
+            <div class="core"></div>
+            <div class="ring-text">SIGNAL / SIGNAL / SIGNAL /</div>
+          </div>
+          <div class="card-meta"><span>02</span><span>3D / DATA</span></div>
+          <h3>Signal Chamber</h3>
+          <p>A visual data field that responds to movement and time.</p>
+          <a href="#system" class="card-link">OPEN SYSTEM ↗</a>
+        </article>
+
+        <article class="card card-c">
+          <div class="card-visual">
+            <div class="bars"></div>
+            <div class="portal"></div>
+          </div>
+          <div class="card-meta"><span>03</span><span>AI / VISUALS</span></div>
+          <h3>Portal 9</h3>
+          <p>Typography, particles and light assembled into a moving identity.</p>
+          <a href="#system" class="card-link">OPEN SYSTEM ↗</a>
+        </article>
+      </div>
+    </section>
+
+    <section class="system" id="system">
+      <div class="system-backdrop"></div>
+      <div class="section-tag">/ 003 — SYSTEM</div>
+      <div class="system-grid">
+        <div>
+          <h2>Designed to<br><span>move.</span></h2>
+          <p>Touch the field. Drag across the surface. Change the frequency. The interface is deliberately alive.</p>
+        </div>
+        <div class="control-panel">
+          <label>FREQUENCY <output id="freqOut">62</output></label>
+          <input id="freq" type="range" min="0" max="100" value="62">
+          <label>GLOW <output id="glowOut">78</output></label>
+          <input id="glow" type="range" min="0" max="100" value="78">
+          <button id="pulseBtn" class="pulse-btn">TRIGGER PULSE</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="footer-cta">
+      <div class="section-tag">/ READY</div>
+      <h2>MAKE SOMETHING<br><span>UNREAL.</span></h2>
+      <a class="btn primary large" href="mailto:hello@voidlab.example">START A PROJECT <span>↗</span></a>
+    </section>
+  </main>
+
+  <footer>
+    <span>VOID//LAB © 2026</span>
+    <span>BUILT WITH WEBGL + CSS</span>
+    <span>NO BORING WEBSITES</span>
+  </footer>
+
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="#experiments">EXPERIMENTS</a>
+    <a href="#system">SYSTEM</a>
+    <a href="#about">ABOUT</a>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/three@0.164.1/build/three.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
